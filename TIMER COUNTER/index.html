@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer
+
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio src="audio/alarm.mp3"  id="alarm"></audio>
+    <div id ="timer_input">
+        <input type="number" step="1" placeholder="Enter the time in minutes" id="time_in_minutes">
+        <button onclick="formatTimeLeft()" id="start">Start Timer</button>
+        
+    </div>    
+    
+
+    <div id="timer_clock_container">
+        <div id="timer_clock">
+       <span id="time">00:00</span>
+        </div>
+    
+    </div>
+    <div id="stop_container">
+        <button id="stop" onclick="window.location.reload()">RESET</button>
+    </div>
+    
+    
+<script src="script.js"></script>
+<script>
+    var input = document.getElementById("time_in_minutes");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("start").click();
+  }
+});
+</script>
+    
+</body>
+</html>
