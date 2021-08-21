@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro-Timer</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Michroma"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-text-container">
+        <p class="logo">POMODORO TIMER</p>
+        <p class="greeting">GOOD MORNING! HUSTLERS</p>
+      </div>
+    </header>
+    <main id="main">
+      <h1 class="heading">
+        <q>Time is the most valuable thing a man can spend</q
+        ><br />&#8211;Theophrastus
+      </h1>
+      <div class="time-container pomodoro">
+        <div class="clock">
+          <p class="time">
+            <span class="min" id="pmin">25</span>:<span class="sec" id="psec"
+              >00</span
+            >
+          </p>
+        </div>
+        <div class="button-title-container">
+          <p class="guide">Time to hustle</p>
+          <div class="button-container">
+            <button id="reset" class="reset-button boton">RESET</button>
+            <button onclick="check(0)" class="start boton">START</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="time-container fiveminbreak">
+        <div class="clock">
+          <p class="time">
+            <span id="bmin5" class="min">05</span>:<span id="bsec5" class="sec"
+              >00</span
+            >
+          </p>
+        </div>
+        <div class="button-title-container">
+          <p class="guide">You deserve a break</p>
+          <div class="button-container">
+            <button
+              onclick="min5shift()"
+              id="min10redirect"
+              class="reset-button boton"
+            >
+              10 min
+            </button>
+            <button onclick="check(1)" class="start boton">START</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="time-container tenminbreak">
+        <div class="clock">
+          <p class="time">
+            <span id="bmin10" class="min">10</span>:<span
+              class="sec"
+              id="bsec10"
+              >00</span
+            >
+          </p>
+        </div>
+        <div class="button-title-container">
+          <p class="guide">You deserve a break</p>
+          <div class="button-container">
+            <button
+              onclick="min10shift()"
+              id="min5redirect"
+              class="reset-button boton"
+            >
+              5 min
+            </button>
+            <button onclick="check(2)" class="start boton">START</button>
+          </div>
+        </div>
+      </div>
+      <div class="break-container">
+        <button onclick="breakcoming()" class="break pomodorobt">BREAK</button>
+        <button onclick="pomodcoming()" class="break breakbt">POMODORO</button>
+      </div>
+      <div class="copy-read-article">
+        <a
+          target="_blank"
+          href="https://medium.com/life-hacks/more-productivity-with-the-pomodoro-technique-d7ce8926ec0c#.hcqsv37u4/"
+          class="read-more"
+          >About Pomodoro Technique</a
+        >
+
+        <div class="social-container">
+          <a href="https://github.com/cyberspatial/" class="github social"
+            ><i class="fa fa-github" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ravi-pratap-singh-62a367216/"
+            class="linkedin social"
+            ><i class="fa fa-linkedin" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p class="copyrt">
+          <i class="fa fa-copyright" aria-hidden="true"></i
+          >&nbsp;RaviPratapSingh&nbsp;2021
+        </p>
+      </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
