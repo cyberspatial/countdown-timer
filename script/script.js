@@ -41,7 +41,8 @@ function changetime(i){
 
  
   if(min==0 &&sec==0)
-  {    
+  {    var audio = new Audio('../Audio/alarm.wav');
+  audio.play();
       clearInterval(control);
   }
    
