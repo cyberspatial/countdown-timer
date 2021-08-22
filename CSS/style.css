@@ -110,7 +110,7 @@ main {
   font-family: Rockwell;
   font-size: 2em;
   text-align: center;
-  background-color: var(--fourth-shade);
+  
   border-radius: 5px;
 }
 .button-container {
