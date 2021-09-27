@@ -27,6 +27,7 @@ function changetime(i) {
     minute[i].innerHTML = min;
     second[i].innerHTML = sec--;
 
+
     if (sec < 10) {
         newsec = "0" + sec;
         second[i].innerHTML = newsec;
